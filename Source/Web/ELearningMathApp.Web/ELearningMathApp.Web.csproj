@@ -255,6 +255,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ELearningMathApp.Data.Common\ELearningMathApp.Data.Common.csproj">
+      <Project>{be01b3e7-8686-4b5a-a958-cbd225f2532b}</Project>
+      <Name>ELearningMathApp.Data.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ELearningMathApp.Data.Models\ELearningMathApp.Data.Models.csproj">
       <Project>{66ace20c-960a-4bb1-ae44-ba2011b9d848}</Project>
       <Name>ELearningMathApp.Data.Models</Name>
