@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELearningMathApp.Web", "Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELearningMathApp.Data.Common", "ELearningMathApp.Data.Common\ELearningMathApp.Data.Common.csproj", "{BE01B3E7-8686-4B5A-A958-CBD225F2532B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELearningMathApp.Web.Infrastructure", "ELearningMathApp.Web.Infrastructure\ELearningMathApp.Web.Infrastructure.csproj", "{C8C1FBE1-6EC7-4072-99D6-D6B3B6388B7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{BE01B3E7-8686-4B5A-A958-CBD225F2532B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE01B3E7-8686-4B5A-A958-CBD225F2532B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE01B3E7-8686-4B5A-A958-CBD225F2532B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C1FBE1-6EC7-4072-99D6-D6B3B6388B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C1FBE1-6EC7-4072-99D6-D6B3B6388B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C1FBE1-6EC7-4072-99D6-D6B3B6388B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C1FBE1-6EC7-4072-99D6-D6B3B6388B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,5 +62,6 @@ Global
 		{66ACE20C-960A-4BB1-AE44-BA2011B9D848} = {A5136C52-A971-48AA-ADBA-484B865AE764}
 		{5CA3D9A1-5AF0-4388-8FC3-BDB741ED5CF1} = {770E878E-AA35-4878-AE01-67A6322A439E}
 		{BE01B3E7-8686-4B5A-A958-CBD225F2532B} = {A5136C52-A971-48AA-ADBA-484B865AE764}
+		{C8C1FBE1-6EC7-4072-99D6-D6B3B6388B7C} = {770E878E-AA35-4878-AE01-67A6322A439E}
 	EndGlobalSection
 EndGlobal

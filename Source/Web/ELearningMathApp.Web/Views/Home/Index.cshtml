@@ -1,8 +1,18 @@
-﻿@{
+﻿@using ELearningMathApp.Web.ViewModels.Home
+
+@model IEnumerable<IndexCommentViewModel>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
     <h1>Math6</h1>
     <p>Hi from Math6!</p>
+</div>
+<div class="container">
+    @foreach (var comment in Model)
+    {
+        <p>@comment.Name</p>
+    }
 </div>

@@ -1,12 +1,15 @@
 ﻿namespace ELearningMathApp.Web.Controllers
 {
-    using ELearningMathApp.Data.Common.Repository;
-    using ELearningMathApp.Data.Models;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
     using System.Web.Mvc;
+    using AutoMapper.QueryableExtensions;
+
+    using ELearningMathApp.Data.Common.Repository;
+    using ELearningMathApp.Data.Models;
+    using ELearningMathApp.Web.ViewModels.Home;
 
     public class HomeController : Controller
     {
@@ -19,7 +22,9 @@
 
         public ActionResult Index()
         {
-            return View();
+            var comments = this.comments.All().Project().To<IndexCommentViewModel>();
+
+            return View(comments);
         }
 
     }
