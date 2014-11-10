@@ -22,6 +22,7 @@
             return new AppDbContext();
         }
 
+        // Math6 db models collections
         public IDbSet<Comment> Comments { get; set; }
 
         public override int SaveChanges()
