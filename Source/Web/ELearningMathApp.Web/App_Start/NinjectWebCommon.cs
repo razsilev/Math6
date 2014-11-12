@@ -65,6 +65,8 @@ namespace ELearningMathApp.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind(typeof(IRepository<Comment>)).To(typeof(DeletableEntityRepository<Comment>));
+
             kernel.Bind<DbContext>().To<AppDbContext>();
             kernel.Bind(typeof(IDeletableEntityRepository<>)).To(typeof(DeletableEntityRepository<>));
             kernel.Bind(typeof(IRepository<>)).To(typeof(GenericRepository<>));

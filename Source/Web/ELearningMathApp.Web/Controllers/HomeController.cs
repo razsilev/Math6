@@ -13,9 +13,9 @@
 
     public class HomeController : Controller
     {
-        private IRepository<Comment> comments;
+        private IDeletableEntityRepository<Comment> comments;
 
-        public HomeController(IRepository<Comment> comments)
+        public HomeController(IDeletableEntityRepository<Comment> comments)
         {
             this.comments = comments;
         }
