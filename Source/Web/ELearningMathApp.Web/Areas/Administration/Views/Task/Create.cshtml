@@ -1,0 +1,14 @@
+﻿@model ELearningMathApp.Web.Areas.Administration.Models.TaskInputModel
+@{
+    ViewBag.Title = "Create task";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Task", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+    @Html.LabelFor(model => model.Condition)
+    @Html.EditorFor(model => model.Condition)
+}
+

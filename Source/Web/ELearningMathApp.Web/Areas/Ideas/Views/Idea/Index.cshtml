@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ideas</h2>
+<div>
+    @using (@Html.BeginForm("CreateIdea", "Idea", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.Label("", "Public your idea:")
+                    @Html.TextArea("name", "", new { @class = "form-control", @placeholder = "name", @type = "text", TextMode = "MultiLine" })
+                </div>
+            </div>
+        </div>
+        <br />
+        <input type="submit" name="Send" class="btn btn-primary" />
+    }
+</div>
+
