@@ -7,12 +7,19 @@
 @using (Html.BeginForm("Create", "Task", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
- 
+
     @Html.ValidationSummary("", new { @class = "text-danger" })
-       
+
     @Html.LabelFor(model => model.Condition)
     @Html.EditorFor(model => model.Condition)
     <br />
     <input type="submit" value="Create task" class="btn btn-info btn-lg" />
 }
 
+<br />
+<div class="container">
+    @if (Model != null)
+    {
+        @Html.Raw(Model.Condition)
+    }
+</div>

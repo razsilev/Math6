@@ -14,6 +14,7 @@ namespace ELearningMathApp.Web.App_Start
     using ELearningMathApp.Data.Models;
     using System.Data.Entity;
     using ELearningMathApp.Data;
+    using ELearningMathApp.Web.Infrastructure;
 
     public static class NinjectWebCommon 
     {
@@ -70,6 +71,8 @@ namespace ELearningMathApp.Web.App_Start
             kernel.Bind<DbContext>().To<AppDbContext>();
             kernel.Bind(typeof(IDeletableEntityRepository<>)).To(typeof(DeletableEntityRepository<>));
             kernel.Bind(typeof(IRepository<>)).To(typeof(GenericRepository<>));
+
+            kernel.Bind<ISanitizer>().To<HtmlSanitizerAdapter>();
         }        
     }
 }
