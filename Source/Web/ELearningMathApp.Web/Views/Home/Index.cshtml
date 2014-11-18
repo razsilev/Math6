@@ -1,6 +1,6 @@
 ﻿@using ELearningMathApp.Web.ViewModels.Home
 
-@model IEnumerable<IndexCommentViewModel>
+@model IEnumerable<IndexIdeasViewModel>
 
 @{
     ViewBag.Title = "Home Page";
@@ -11,8 +11,10 @@
     <p>Hi from Math6!</p>
 </div>
 <div class="container">
-    @foreach (var comment in Model)
+    <h3>New ideas:</h3>
+    @foreach (var idea in Model)
     {
-        <p>@comment.Name</p>
+        <p>@idea.Content</p>
+        <hr />
     }
 </div>

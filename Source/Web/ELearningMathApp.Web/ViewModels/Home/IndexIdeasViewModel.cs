@@ -8,8 +8,8 @@
     using ELearningMathApp.Data.Models;
     using ELearningMathApp.Web.Infrastructure.Mapping;
 
-    public class IndexCommentViewModel : IMapFrom<Comment>
+    public class IndexIdeasViewModel : IMapFrom<IdeaDbModel>
     {
-        public string Name { get; set; }
+        public string Content { get; set; }
     }
 }

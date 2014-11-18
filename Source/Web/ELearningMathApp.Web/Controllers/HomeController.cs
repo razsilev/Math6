@@ -13,18 +13,27 @@
 
     public class HomeController : Controller
     {
-        private IDeletableEntityRepository<Comment> comments;
+        private IRepository<IdeaDbModel> ideasRepo;
 
-        public HomeController(IDeletableEntityRepository<Comment> comments)
+        public HomeController(IRepository<IdeaDbModel> ideasRepo)
         {
-            this.comments = comments;
+            this.ideasRepo = ideasRepo;
         }
 
+        [OutputCache(Duration = 60)]
         public ActionResult Index()
         {
-            var comments = this.comments.All().Project().To<IndexCommentViewModel>();
+            //var comments = this.comments.All().Project().To<IndexCommentViewModel>();
 
-            return View(comments);
+            var newIdeas = this.ideasRepo
+                .All()
+                .OrderBy(i => i.CreatedOn)
+                .Take(3)
+                .Project()
+                .To<IndexIdeasViewModel>()
+                .ToList();
+
+            return View(newIdeas);
         }
 
     }
