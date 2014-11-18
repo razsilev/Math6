@@ -25,6 +25,8 @@
         // Math6 db models collections
         public IDbSet<Comment> Comments { get; set; }
 
+        public IDbSet<IdeaDbModel> Ideas { get; set; }
+
         public override int SaveChanges()
         {
             this.ApplyAuditInfoRules();

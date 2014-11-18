@@ -198,6 +198,7 @@
     <Compile Include="Areas\Administration\Models\TaskInputModel.cs" />
     <Compile Include="Areas\Ideas\Controllers\IdeaController.cs" />
     <Compile Include="Areas\Ideas\IdeasAreaRegistration.cs" />
+    <Compile Include="Areas\Ideas\Models\Idea\IdeaViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -233,6 +234,7 @@
     <Content Include="Areas\Administration\Views\web.config" />
     <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Administration\Views\Task\Create.cshtml" />
+    <Content Include="Areas\Ideas\Views\Idea\ShowIdeas.cshtml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -453,7 +455,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Views\Shared\" />
-    <Folder Include="Areas\Ideas\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
